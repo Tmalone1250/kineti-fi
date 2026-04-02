@@ -1,8 +1,0 @@
-{
-  "errors": [
-    {
-      "title": "Unauthorized Error",
-      "detail": "The API key is invalid, please, make sure that you are using a valid key"
-    }
-  ]
-}

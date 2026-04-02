@@ -55,8 +55,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+_research/
 
 # --- SYSTEM & EDITORS ---
+/_research/
 .vscode/*
 !.vscode/extensions.json
 .idea/
