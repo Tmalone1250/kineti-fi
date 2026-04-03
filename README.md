@@ -1,98 +1,66 @@
-# KinetiFi: AI-Driven DeFi Optimization
+# KinetiFi: Autonomous DeFi Optimization (Base Mainnet)
 
-**KinetiFi** is a next-generation decentralized finance (DeFi) portfolio optimizer that bridges AI-driven market intelligence with non-custodial on-chain execution. It enables users to deploy a personal **KinetiFi AI Agent** that scans the multichain ecosystem for yield opportunities and registers "Intents" to autonomously improve portfolio performance.
+**KinetiFi** is a next-generation decentralized finance (DeFi) portfolio optimizer that bridges AI-driven market intelligence with non-custodial on-chain execution. It enables users to deploy a personal **KinetiFi AI Agent** that scans the **Base Mainnet** ecosystem for yield opportunities and registers "Intents" to autonomously improve portfolio performance.
 
 ---
 
 ## 🏗 System Architecture
 
-KinetiFi is composed of three primary layers working in orchestration:
+KinetiFi is composed of three primary layers working in orchestration on **Base Mainnet (Chain ID 8453)**:
 
-### 1. Smart Contract Layer (Base Sepolia)
+### 1. Smart Contract Layer (Mainnet)
 
-The foundation of KinetiFi is a secure, intent-based account abstraction framework.
+The foundation of KinetiFi is a secure, intent-based account abstraction framework:
 
+- **KinetiFiAgentNFT**: An ERC-721 token representing your unique AI Agent identity. Owning this NFT is required to register intents.
 - **KinetiFiAccount**: An advanced smart account (ERC-4337 style) supporting local session modules.
-- **KinetiFiAccountFactory**: Provides deterministic `CREATE2` deployment for user accounts based on their EOA.
 - **IntentRegistry**: A central logic contract where Agents log signed optimization intents (Target Vault, Min APY, CallData, Deadline).
-- **KinetiFiSessionModule**: Manages ephemeral authorizations. Users grant the Agent a 24-hour session key, allowing it to register intents without a manual signature for every discovery.
+- **KinetiFiSessionModule**: Manages ephemeral authorizations. Users grant the Agent a session key, allowing it to register intents without a manual signature for every discovery.
 
-### 2. AI Agent Backend (Python/FastAPI)
+### 2. On-Chain Discovery Engine
 
-The "Brain" of the project, responsible for heavy lifting and cross-chain discovery.
+Replacing fragile legacy APIs, KinetiFi uses a robust, event-based discovery system:
 
-- **KinetiFiScanner**: Aggregates live portfolio data from **Zerion** and tracks global yield benchmarks via **DefiLlama**.
-- **Discovery Engine**: Identifies "Upgrade Opportunities" (moves with >200bps yield delta) and calculates optimal swap paths.
-- **Safety & Risk Module**: Enforces strict guardrails:
-  - **Yield Minimum**: Forces a minimum 2% APY improvement.
-  - **Gas Efficiency**: Defers moves if gas exceeds 5% of monthly projected earnings.
-  - **Slippage Control**: Strict 0.5% max slippage buffer on all intents.
-- **Reasoning Engine**: Generates technical explanations for every move, visible in the UI.
+- **Gauge Scanning**: Automatically discovers staked NFT positions by scanning Aerodrome Slipstream Gauge logs.
+- **Resilient Multicall**: Uses isolated multicall batches with `allowFailure: true` to prevent single ABI decode errors from poisoning the entire portfolio view.
+- **Deterministic Valuation**: Employs a tick-based valuation pipeline for Uniswap V3 and Aerodrome Slipstream positions, fetching real-time `slot0` data from concentrated liquidity pools.
 
 ### 3. Frontend Dashboard (React/Vite)
 
-A premium, glassmorphism-inspired interface built for transparency and control.
+A premium interface built for transparency and control:
 
-- **Technology**: React 18, Vite, Framer Motion, Tailwind CSS, Wagmi v2, Reown AppKit, TanStack Query.
-- **Zero-CORS Proxy**: Custom Edge Function proxy to fetch Zerion data securely without exposing API keys.
-
----
-
-## 🎨 UI/UX Features
-
-- **Portoflio Intelligence**: Real-time USD valuation and asset allocation across 10+ chains.
-- **Visual Feedback System**:
-  - **Scanning Animations**: Sidebar indicates active multichain searches.
-  - **Agent Success Glow**: Breathing "Active" status once on-chain authorization is confirmed.
-  - **Branded Skeletons**: High-fidelity shimmer loaders matching the KinetiFi aesthetic.
-- **Strategy Feed**: A real-time log of Agent activity including "AI Insights" and a history of registered optimization intents.
-- **Mobile Responsive**: Fully optimized for small screens with stacked layouts and fluid headers.
+- **Tech Stack**: React 18, Vite, Framer Motion, Tailwind CSS, Wagmi v2, Reown AppKit, TanStack Query.
+- **Performance Optimized**: Custom build pipeline with 4GB Node.js memory allocation to handle complex DeFi dependency trees.
 
 ---
 
-## 🔄 The User Workflow ("The Zen Loop")
+## 🛡 Security & Resilience
 
-1. **Connect**: User connects via MetaMask or WalletConnect on Base Sepolia.
-2. **Authorize**: User enables the AI Agent via the Dashboard. This grants a 24h session key to the Agent.
-3. **Discover**: The Backend Agent scans holdings and identifies yield upgrades (e.g., _"Move USDC from Aave (5%) to Morpho (12%)"_).
-4. **Validation**: The Agent checks gas viability and yield delta (Safety & Risk Module).
-5. **Register**: User clicks "Register Intent" to commit the move on-chain to the `IntentRegistry`.
+- **Isolated Multicall**: Every position discovery call is isolated. If one protocol (e.g., a specific Aerodrome Gauge) fails to decode, the rest of your portfolio still displays correctly.
+- **Tick-Based Pricing**: We don't rely on external price APIs. Valuation is derived directly from the `sqrtPriceX96` of the underlying liquidity pool.
+- **Non-Custodial**: All intents are registered through your Smart Account and require a valid Session Key (SessionModule) or your EOA signature.
 
 ---
 
-## 🛠 Technical Setup
+## 📜 Verified Contract Registry (Base Mainnet)
 
-### Frontend (.env)
-
-```bash
-VITE_ZERION_API_KEY=your_key
-VITE_WALLETCONNECT_PROJECT_ID=...
-VITE_AGENT_API_URL=http://localhost:8000
-```
-
-### Agent Backend (.env)
-
-```bash
-RPC_URL=https://base-sepolia.infura.io/v3/...
-INTENT_REGISTRY_ADDRESS=0xeEa52b6e3bda8a93eEddE8D97B272025CC5e20Fba
-AGENT_PRIVATE_KEY=...
-```
-
-### Running Locally
-
-1. **Agent**: `uvicorn main:app --port 8000`
-2. **Frontend**: `npm run dev`
+| Contract              | Address                                      |
+| :-------------------- | :------------------------------------------- |
+| **AgentNFT**          | `0x5eCeC712ab5a1DFfaeab0086f04124574D5913Ec` |
+| **IntentRegistry**    | `0x142f2c70fb19a46b2c71052cf0f5c72210bd737b` |
+| **EntryPoint (v0.7)** | `0x0000000071727De22E5E9d8BAf0edAc6f37da032` |
+| **Factory**           | `0x52bdc8eb286b279aab769fc3ec433cc8df61ce43` |
+| **SessionModule**     | `0x94044d6cdf49f1278f4a097776f40dd6e5943820` |
+| **Aerodrome NFPM**    | `0xa990C6a764B73BF43Cee5BB40339C3322fb9D55f` |
 
 ---
 
-## 📜 Deployment Details (Base Sepolia)
+## 🛠 Project Structure
 
-| Contract            | Address                                       |
-| :------------------ | :-------------------------------------------- |
-| **KinetiFiAccount** | `0xbA355fF2b2d0391A789669d4d8D695E70A2d4e40`  |
-| **IntentRegistry**  | `0xeEa52b6e3bda8a93eEddE8D97B272025CC5e20Fba` |
-| **SessionModule**   | `0x72af5B8b25D7fE949177397D09b5CEeC22e44004`  |
-| **Factory**         | `0xCB6350D5a52930a5C06196614B94E67B418cbD41`  |
+- `src/hooks/useDeFiPositions`: The core orchestrator for discovery and valuation.
+- `src/lib/discovery/gaugeDiscovery.ts`: Logic for scanning Gauge events.
+- `src/constants/contracts.ts`: Verified ABIs and Mainnet addresses.
+- `src/wagmi.ts`: Wallet connection and AppKit configuration.
 
 ---
 
