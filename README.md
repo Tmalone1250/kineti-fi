@@ -6,17 +6,17 @@
 
 ## 📱 Screenshots
 
-|                     **Portfolio Intelligence Overview**                     |                     **AI Agent Strategy Chat**                      |
-| :-------------------------------------------------------------------------: | :-----------------------------------------------------------------: |
-| ![Portfolio Overview](./public/assets/Screenshot%202026-04-03%20121239.png) | ![Agent Chat](./public/assets/Screenshot%202026-04-03%20121352.png) |
+|                     **Portfolio Intelligence Overview**                     |                           **DeFi Yield Strategies**                            |
+| :-------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
+| ![Portfolio Overview](./public/assets/Screenshot%202026-04-03%20121239.png) | ![DeFi Yield Strategies](./public/assets/Screenshot%202026-04-03%20121352.png) |
 
-|                       **DeFi Position Discovery**                       |                     **Yield Upgrade Opportunities**                     |
-| :---------------------------------------------------------------------: | :---------------------------------------------------------------------: |
-| ![DeFi Positions](./public/assets/Screenshot%202026-04-03%20121336.png) | ![Yield Upgrades](./public/assets/Screenshot%202026-04-03%20121409.png) |
+|                           **DeFi Positions**                            |                       **Unified Transaction History**                        |
+| :---------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+| ![DeFi Positions](./public/assets/Screenshot%202026-04-03%20121336.png) | ![Transaction History](./public/assets/Screenshot%202026-04-03%20121409.png) |
 
-|                     **Intelligence Strategy Feed**                     |                       **Unified Transaction History**                        |
-| :--------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-| ![Strategy Feed](./public/assets/Screenshot%202026-04-03%20121324.png) | ![Transaction History](./public/assets/Screenshot%202026-04-03%20121424.png) |
+|                           **Asset Vault**                            |                          **AI Agent Chat**                          |
+| :------------------------------------------------------------------: | :-----------------------------------------------------------------: |
+| ![Asset Vault](./public/assets/Screenshot%202026-04-03%20121324.png) | ![Agent Chat](./public/assets/Screenshot%202026-04-03%20121424.png) |
 
 ---
 
