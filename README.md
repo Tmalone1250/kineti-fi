@@ -4,24 +4,22 @@
 
 ---
 
-## 📱 Application Showcase (MVP)
+## 📱 Screenshots
 
-The following screenshots demonstrate the **Showcase Mode** of the KinetiFi MVP, featuring a simulated $10,000 portfolio optimized for +35% APY growth across Base Mainnet protocols.
+|                     **Portfolio Intelligence Overview**                     |                      **AI Agent Strategy Chat**                       |
+| :-------------------------------------------------------------------------: | :-------------------------------------------------------------------: |
+| ![Portfolio Overview](./public/assets/Screenshot%202026-04-03%20121239.png) |  ![Agent Chat](./public/assets/Screenshot%202026-04-03%20121352.png)  |
+|        _Real-time net worth tracking and multi-chain distribution._         | _Large Language Model (LLM) agent generating strategic yield theses._ |
 
-| **Portfolio Intelligence Overview** | **AI Agent Strategy Chat** |
-| :---: | :---: |
-| ![Portfolio Overview](./public/assets/Screenshot%202026-04-03%20121239.png) | ![Agent Chat](./public/assets/Screenshot%202026-04-03%20121352.png) |
-| *Real-time net worth tracking and multi-chain distribution.* | *Large Language Model (LLM) agent generating strategic yield theses.* |
-
-| **DeFi Position Discovery** | **Yield Upgrade Opportunities** |
-| :---: | :---: |
+|                       **DeFi Position Discovery**                       |                     **Yield Upgrade Opportunities**                     |
+| :---------------------------------------------------------------------: | :---------------------------------------------------------------------: |
 | ![DeFi Positions](./public/assets/Screenshot%202026-04-03%20121336.png) | ![Yield Upgrades](./public/assets/Screenshot%202026-04-03%20121409.png) |
-| *Automated scanning of Uniswap V3, Aerodrome, and Beefy positions.* | *AI-identified upgrades with highlighted APY boost potential.* |
+|   _Automated scanning of Uniswap V3, Aerodrome, and Beefy positions._   |     _AI-identified upgrades with highlighted APY boost potential._      |
 
-| **Intelligence Strategy Feed** | **Unified Transaction History** |
-| :---: | :---: |
+|                     **Intelligence Strategy Feed**                     |                       **Unified Transaction History**                        |
+| :--------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
 | ![Strategy Feed](./public/assets/Screenshot%202026-04-03%20121324.png) | ![Transaction History](./public/assets/Screenshot%202026-04-03%20121424.png) |
-| *Live audit logs of agent discovery and portfolio optimizations.* | *Consolidated history of EOA and Smart Account operations.* |
+|   _Live audit logs of agent discovery and portfolio optimizations._    |         _Consolidated history of EOA and Smart Account operations._          |
 
 ---
 
