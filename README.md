@@ -6,20 +6,17 @@
 
 ## 📱 Screenshots
 
-|                     **Portfolio Intelligence Overview**                     |                      **AI Agent Strategy Chat**                       |
-| :-------------------------------------------------------------------------: | :-------------------------------------------------------------------: |
-| ![Portfolio Overview](./public/assets/Screenshot%202026-04-03%20121239.png) |  ![Agent Chat](./public/assets/Screenshot%202026-04-03%20121352.png)  |
-|        _Real-time net worth tracking and multi-chain distribution._         | _Large Language Model (LLM) agent generating strategic yield theses._ |
+|                     **Portfolio Intelligence Overview**                     |                     **AI Agent Strategy Chat**                      |
+| :-------------------------------------------------------------------------: | :-----------------------------------------------------------------: |
+| ![Portfolio Overview](./public/assets/Screenshot%202026-04-03%20121239.png) | ![Agent Chat](./public/assets/Screenshot%202026-04-03%20121352.png) |
 
 |                       **DeFi Position Discovery**                       |                     **Yield Upgrade Opportunities**                     |
 | :---------------------------------------------------------------------: | :---------------------------------------------------------------------: |
 | ![DeFi Positions](./public/assets/Screenshot%202026-04-03%20121336.png) | ![Yield Upgrades](./public/assets/Screenshot%202026-04-03%20121409.png) |
-|   _Automated scanning of Uniswap V3, Aerodrome, and Beefy positions._   |     _AI-identified upgrades with highlighted APY boost potential._      |
 
 |                     **Intelligence Strategy Feed**                     |                       **Unified Transaction History**                        |
 | :--------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
 | ![Strategy Feed](./public/assets/Screenshot%202026-04-03%20121324.png) | ![Transaction History](./public/assets/Screenshot%202026-04-03%20121424.png) |
-|   _Live audit logs of agent discovery and portfolio optimizations._    |         _Consolidated history of EOA and Smart Account operations._          |
 
 ---
 
