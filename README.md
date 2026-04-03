@@ -4,6 +4,27 @@
 
 ---
 
+## 📱 Application Showcase (MVP)
+
+The following screenshots demonstrate the **Showcase Mode** of the KinetiFi MVP, featuring a simulated $10,000 portfolio optimized for +35% APY growth across Base Mainnet protocols.
+
+| **Portfolio Intelligence Overview** | **AI Agent Strategy Chat** |
+| :---: | :---: |
+| ![Portfolio Overview](./public/assets/Screenshot%202026-04-03%20121239.png) | ![Agent Chat](./public/assets/Screenshot%202026-04-03%20121352.png) |
+| *Real-time net worth tracking and multi-chain distribution.* | *Large Language Model (LLM) agent generating strategic yield theses.* |
+
+| **DeFi Position Discovery** | **Yield Upgrade Opportunities** |
+| :---: | :---: |
+| ![DeFi Positions](./public/assets/Screenshot%202026-04-03%20121336.png) | ![Yield Upgrades](./public/assets/Screenshot%202026-04-03%20121409.png) |
+| *Automated scanning of Uniswap V3, Aerodrome, and Beefy positions.* | *AI-identified upgrades with highlighted APY boost potential.* |
+
+| **Intelligence Strategy Feed** | **Unified Transaction History** |
+| :---: | :---: |
+| ![Strategy Feed](./public/assets/Screenshot%202026-04-03%20121324.png) | ![Transaction History](./public/assets/Screenshot%202026-04-03%20121424.png) |
+| *Live audit logs of agent discovery and portfolio optimizations.* | *Consolidated history of EOA and Smart Account operations.* |
+
+---
+
 ## 🏗 System Architecture
 
 KinetiFi is composed of three primary layers working in orchestration on **Base Mainnet (Chain ID 8453)**:
